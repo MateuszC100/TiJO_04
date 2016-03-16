@@ -2,7 +2,7 @@ describe('app', function () {
     'use strict';
     var app = window.app;
 
-    describe('Division function', function () {
+    xdescribe('Division function', function () {
         it('should divide number a by b', function () {
             expect(app.divide(10, 5)).toEqual(2);
             expect(app.divide(15, 3)).toEqual(5)
@@ -35,4 +35,27 @@ describe('app', function () {
             expect(app.divide(101, 0)).toEqual(false);
         });
     });
+    describe('getDescendingNumbers',function(){
+        it('should return false when first argument is bigger than second argument',function(){
+            expect(app.getDescendingNumbers(90,100)).toEqual(false);
+        });
+        it('should string of value between numberFor and numberTo when arguments of function numberFor is more than numberTo',function(){
+            expect(app.getDescendingNumbers(12,10)).toEqual("12 11 10");
+        });
+    });
+
+    xdescribe('areaofTrapezoid',function(){
+        it('should return false when a<0',function(){
+                expect(app.areaOfTrapezoid(-5,2,1)).toEqual(false);
+            });
+        it('should return false when b<0',function(){
+            expect(app.areaOfTrapezoid(2,-8,2)).toEqual(false);
+        });
+        it('should return false when h<0',function(){
+            expect(app.areaOfTrapezoid(2,5,-2)).toEqual(false);
+        });
+
+    })
+
+
 });
