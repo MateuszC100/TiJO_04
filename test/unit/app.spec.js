@@ -55,7 +55,30 @@ describe('app', function () {
             expect(app.areaOfTrapezoid(2,5,-2)).toEqual(false);
         });
 
-    })
+    });
+
+    descibe('maxArray',function(){
+        it('should return max number with array',function(){
+            expect(app.maxArray([2,5,8,1])).toEqual(8);
+        });
+
+        it('should return false if array is empty',function(){
+            expect(app.maxArray([])).toEqual(false);
+        });
+    });
+
+    describe('squareOdd',function(){
+        it('should return array number',function(){
+           expect(app.squareOdd([1,3,5,7])).toEqual([1,9,25,49]);
+        });
+        it('should return false if array have even numbers',function(){
+            expect(app.squareOdd([2,4,8])).toEqual(false);
+        });
+        it('should return false if array is empty',function(){
+            expect(app.squareOdd([])).toEqual(false);
+        });
+    });
+
 
 
 });
